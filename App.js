@@ -27,6 +27,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import MainApp from './app/page/main-app.js';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -86,50 +87,54 @@ const App: () => Node = () => {
       },
       method: "POST"
     })
-    .then((response) => response.json())
-    .then((response) => {
-      console.log('response2', response)
-    }).catch((error) => {
-      //check the response
-      console.log('error', error)
-    })
+      .then((response) => response.json())
+      .then((response) => {
+        console.log('response2', response)
+      }).catch((error) => {
+        //check the response
+        console.log('error', error)
+      })
 
 
   }
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
+    // <SafeAreaView style={backgroundStyle}>
+    //   <StatusBar
+    //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+    //     backgroundColor={backgroundStyle.backgroundColor}
+    //   />
+    //   <ScrollView
+    //     contentInsetAdjustmentBehavior="automatic"
+    //     style={backgroundStyle}>
+    //     <Header />
+    //     <View
+    //       style={{
+    //         backgroundColor: isDarkMode ? Colors.black : Colors.white,
+    //       }}>
+    //       <Section title="Step One">
+    //         Edit <Text style={styles.highlight}>App.js</Text> to change this
+    //         screen and then come back to see your edits.
+    //       </Section>
 
 
-          <Image
-            style={styles.logo}
-            source={{
-              uri: 'https://files-test-wiins.s3.us-west-000.backblazeb2.com/jayson-hinrichsen-Wq0b9wxMmgc-unsplash.jpg',
-            }}
-          />
+    //       <Image
+    //         style={styles.logo}
+    //         source={{
+    //           uri: 'https://files-test-wiins.s3.us-west-000.backblazeb2.com/jayson-hinrichsen-Wq0b9wxMmgc-unsplash.jpg',
+    //         }}
+    //       />
 
-          <Button title="Send File" onPress={sendFile} />
+    //       <Button title="Send File" onPress={sendFile} />
 
 
 
-        </View>
-      </ScrollView>
+    //     </View>
+    //   </ScrollView>
+    //   <MainApp/>
+    // </SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
+      <MainApp />
     </SafeAreaView>
   );
 };
