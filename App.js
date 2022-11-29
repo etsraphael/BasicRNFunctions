@@ -1,6 +1,6 @@
-import type {Node} from 'react';
+import type { Node } from 'react';
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import MainApp from './app/page/main-app.js';
 
 const App: () => Node = () => {
@@ -13,8 +13,8 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 export default App;
