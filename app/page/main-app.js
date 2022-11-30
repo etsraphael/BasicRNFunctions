@@ -38,11 +38,18 @@ class MainApp extends Component {
       });
   };
 
+  generateEthAddress = () => {
+    console.log('called')
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.button} onPress={this.onPress}>
-          <Text>Click me</Text>
+          <Text>Click to upload</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button} onPress={this.generateEthAddress}>
+          <Text>Click to generate an eth address</Text>
         </TouchableOpacity>
       </View>
     );

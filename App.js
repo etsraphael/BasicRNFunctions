@@ -1,9 +1,8 @@
-import type { Node } from 'react';
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import MainApp from './app/page/main-app.js';
 
-const App: () => Node = () => {
+const App = () => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <MainApp />
