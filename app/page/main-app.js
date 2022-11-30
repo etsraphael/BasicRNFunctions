@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { wordlists } from 'bip39'
 
 class MainApp extends Component {
 
@@ -40,6 +41,7 @@ class MainApp extends Component {
 
   generateEthAddress = () => {
     console.log('called')
+    console.log(wordlists.EN.length)
   }
 
   render() {
